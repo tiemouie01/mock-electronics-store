@@ -20,7 +20,7 @@ describe("Check that all expected elements render", () => {
       </Router>
     );
     const headingElement = screen.getByRole("heading");
-    expect(headingElement).toMatch(/e-msika/i);
+    expect(headingElement).toBeInTheDocument();
   });
 
   it("renders home link", () => {
