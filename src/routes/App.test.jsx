@@ -4,9 +4,23 @@ import { vi } from "vitest";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 
-vi.mock("./Header", () => () => <div>Header</div>);
-vi.mock("./shop/Shop", () => () => <div>Shop</div>);
-vi.mock("./Home", () => () => <div>Home</div>);
+vi.mock("./Header", () => {
+  return {
+    default: () => <div>Header</div>,
+  };
+});
+
+vi.mock("./shop/Shop", () => {
+  return {
+    default: () => <div>Shop</div>,
+  };
+});
+
+vi.mock("./Home", () => {
+  return {
+    default: () => <div>Home</div>,
+  };
+});
 
 it("renders App without crashing", () => {
   render(
