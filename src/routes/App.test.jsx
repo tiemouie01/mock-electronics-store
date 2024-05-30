@@ -1,0 +1,48 @@
+import { render, screen } from "@testing-library/react";
+import { it, expect } from "vitest";
+import { vi } from "vitest";
+import { BrowserRouter as Router } from "react-router-dom";
+import App from "./App";
+
+vi.mock("./Header", () => () => <div>Header</div>);
+vi.mock("./shop/Shop", () => () => <div>Shop</div>);
+vi.mock("./Home", () => () => <div>Home</div>);
+
+it("renders App without crashing", () => {
+  render(
+    <Router>
+      <App />
+    </Router>
+  );
+});
+
+it("renders Header component", () => {
+  render(
+    <Router>
+      <App />
+    </Router>
+  );
+  const headerElement = screen.getByText("Header");
+  expect(headerElement).toBeInTheDocument();
+});
+
+it("renders Home component by default", () => {
+  render(
+    <Router>
+      <App />
+    </Router>
+  );
+  const homeElement = screen.getByText("Home");
+  expect(homeElement).toBeInTheDocument();
+});
+
+it("renders Shop component when route is /shop", () => {
+  window.history.pushState({}, "Shop page", "/shop");
+  render(
+    <Router>
+      <App />
+    </Router>
+  );
+  const shopElement = screen.getByText("Shop");
+  expect(shopElement).toBeInTheDocument();
+});
