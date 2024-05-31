@@ -3,7 +3,7 @@ import { FaCartShopping } from "react-icons/fa6";
 
 const Header = ({ cartItems }) => {
   return (
-    <header className="flex items-center justify-between border p-4">
+    <header className="fixed top-0 w-full bg-white flex items-center justify-between border p-4">
       <h1 className="text-3xl font-bold">e-msika</h1>
       <nav className="lg:mr-12">
         <ul className="flex gap-4">
