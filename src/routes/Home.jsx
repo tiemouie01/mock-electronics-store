@@ -1,13 +1,13 @@
 const Home = () => {
   return (
-    <main className="home h-full text-white grid gap-4 p-4">
-      <h2 className="text-5xl lg:text-8xl text-center self-end">
-        Welcome to <span className="font-bold lg:inline block">e-msika</span>
+    <main className="home grid h-full gap-4 p-4 text-white">
+      <h2 className="self-end text-center text-5xl lg:text-8xl">
+        Welcome to <span className="block font-bold lg:inline">e-msika</span>
       </h2>
-      <p className="text-xl lg:text-3xl text-center">
+      <p className="text-center text-xl lg:text-3xl">
         The most competitive and reliable online store of trending electronics.
       </p>
-      <p className="text-center self-end">
+      <p className="self-end text-center">
         Photo by{" "}
         <a href="https://unsplash.com/@cgower?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
           Christopher Gower

@@ -3,7 +3,7 @@ import { FaCartShopping } from "react-icons/fa6";
 
 const Header = ({ cartItems }) => {
   return (
-    <header className="flex justify-between items-center p-4 border">
+    <header className="flex items-center justify-between border p-4">
       <h1 className="text-3xl font-bold">e-msika</h1>
       <nav className="lg:mr-12">
         <ul className="flex gap-4">
@@ -13,7 +13,7 @@ const Header = ({ cartItems }) => {
           <li>
             <Link to="/shop">Shop</Link>
           </li>
-          <li className="flex items-center gap-1"> 
+          <li className="flex items-center gap-1">
             <FaCartShopping />
             <span data-testid="cart-icon">{cartItems}</span>
           </li>
