@@ -1,10 +1,10 @@
 const Home = () => {
   return (
-    <main className="home h-full text-white grid gap-4">
-      <h2 className="text-8xl text-center self-end">
-        Welcome to <span className="font-bold">e-msika</span>
+    <main className="home h-full text-white grid gap-4 p-4">
+      <h2 className="text-5xl lg:text-8xl text-center self-end">
+        Welcome to <span className="font-bold lg:inline block">e-msika</span>
       </h2>
-      <p className="text-3xl text-center">
+      <p className="text-xl lg:text-3xl text-center">
         The most competitive and reliable online store of trending electronics.
       </p>
       <p className="text-center self-end">

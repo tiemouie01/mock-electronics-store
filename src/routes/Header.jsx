@@ -5,7 +5,7 @@ const Header = ({ cartItems }) => {
   return (
     <header className="flex justify-between items-center p-4 border">
       <h1 className="text-3xl font-bold">e-msika</h1>
-      <nav className="mr-12">
+      <nav className="lg:mr-12">
         <ul className="flex gap-4">
           <li>
             <Link to="/">Home</Link>
