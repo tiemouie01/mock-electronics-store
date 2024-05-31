@@ -15,7 +15,7 @@ const Header = ({ cartItems }) => {
           </li>
           <li className="flex items-center gap-1"> 
             <FaCartShopping />
-            <span data-testId="cart-icon">{cartItems}</span>
+            <span data-testid="cart-icon">{cartItems}</span>
           </li>
         </ul>
       </nav>
