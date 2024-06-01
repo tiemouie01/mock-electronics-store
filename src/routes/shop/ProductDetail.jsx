@@ -23,23 +23,38 @@ const ProductDetail = () => {
   return (
     <>
       {selected && (
-        <section>
-          <img src={selected.image} alt={`${selected.title} photo`} />
-          <div>
-            <h2>Name: {selected.title}</h2>
+        <section className="row-start-1 space-y-4 p-4 lg:col-start-4 lg:border">
+          <div className="flex items-center justify-between lg:mt-14">
+            <h2 className="text-xl font-bold">{selected.title}</h2>
             <Link to="/shop">
-              <FaWindowClose />
+              <FaWindowClose size={30} color="blue" />
             </Link>
           </div>
-          <p>Description: {selected.description}</p>
-          <p>Price: ${selected.price}</p>
-          <p>Rating: {selected.rating.rate}/5</p>
-          <form>
-            <label htmlFor="quantity">Quantity:</label>
+          <img
+            src={selected.image}
+            alt={`${selected.title} photo`}
+            className="m-auto w-3/4 md:w-1/2"
+          />
+          <p>
+            <strong>Description:</strong> {selected.description}
+          </p>
+          <div className="flex justify-around">
+            <p>
+              <strong>Price:</strong> ${selected.price}
+            </p>
+            <p>
+              <strong>Rating:</strong> {selected.rating.rate}/5
+            </p>
+          </div>
+          <form className="flex items-center justify-center">
+            <label className="font-bold" htmlFor="quantity">
+              Quantity:
+            </label>
             <input
               type="text"
               onChange={(e) => setQuantity(e.target.value)}
               value={quantity}
+              className="w-[4ch] p-2 text-lg"
             />
             <div>
               <button
@@ -47,6 +62,7 @@ const ProductDetail = () => {
                   e.preventDefault();
                   setQuantity(quantity + 1);
                 }}
+                className="block border p-1"
               >
                 <FaChevronUp />
               </button>
@@ -55,19 +71,20 @@ const ProductDetail = () => {
                   e.preventDefault();
                   if (quantity > 0) setQuantity(quantity - 1);
                 }}
+                className="border p-1"
               >
                 <FaChevronDown />
               </button>
             </div>
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                addToCart();
-              }}
-            >
-              Add to Cart
-            </button>
           </form>
+          <button
+            onClick={(e) => {
+              addToCart();
+            }}
+            className="m-auto block rounded-lg border border-blue-600 bg-blue-500 p-2 text-white"
+          >
+            Add to Cart
+          </button>
         </section>
       )}
     </>

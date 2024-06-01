@@ -23,8 +23,8 @@ const Shop = () => {
     );
 
   return (
-    <main>
-      <Products products={data} setSelectedProduct={setSelectedProduct} />
+    <main className="grid">
+      <Products products={data} setSelectedProduct={setSelectedProduct}/>
       <Outlet context={[updateCartItems, selectedProduct, data, cartItems, setCartItems]} />
     </main>
   );
