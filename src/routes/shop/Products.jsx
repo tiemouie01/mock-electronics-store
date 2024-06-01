@@ -1,4 +1,5 @@
 import ProductCard from "./ProductCard";
+import { Link } from "react-router-dom";
 
 const Products = ({ products, setSelectedProduct }) => {
   const cards = products.map((product) => (
@@ -14,6 +15,9 @@ const Products = ({ products, setSelectedProduct }) => {
   return (
     <section>
       <h2>Products</h2>
+      <button>
+        <Link to="/shop/cart">View Cart</Link>
+      </button>
       {cards}
     </section>
   );
