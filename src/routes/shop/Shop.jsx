@@ -21,11 +21,11 @@ const Shop = () => {
         <FaSpinner size={50} className="animate-spin" />;
       </div>
     );
-    
+
   return (
     <main>
       <Products products={data} setSelectedProduct={setSelectedProduct} />
-      <Outlet context={[updateCartItems, selectedProduct, data, cartItems]} />
+      <Outlet context={[updateCartItems, selectedProduct, data, cartItems, setCartItems]} />
     </main>
   );
 };
