@@ -23,7 +23,7 @@ const ProductDetail = () => {
   return (
     <>
       {selected && (
-        <section className="row-start-1 space-y-4 p-4 lg:col-start-4 lg:border lg:max-w-md">
+        <section className="row-start-1 space-y-4 p-4 lg:col-start-4 lg:max-w-md lg:border">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-bold">{selected.title}</h2>
             <Link to="/shop">
@@ -78,8 +78,8 @@ const ProductDetail = () => {
             </div>
           </form>
           <button
-            onClick={(e) => {
-              addToCart();
+            onClick={() => {
+              if (quantity > 0) addToCart();
             }}
             className="m-auto block rounded-lg border border-blue-600 bg-blue-500 p-2 text-white"
           >
