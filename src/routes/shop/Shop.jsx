@@ -7,7 +7,6 @@ import { Outlet, useOutletContext } from "react-router-dom";
 
 const Shop = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const headerRef = useRef(null);
   const [cartItems, setCartItems] = useOutletContext();
   const { data, error, loading } = useData();
 
@@ -26,11 +25,7 @@ const Shop = () => {
 
   return (
     <main className="grid">
-      <Products
-        products={data}
-        setSelectedProduct={setSelectedProduct}
-        headerRef={headerRef}
-      />
+      <Products products={data} setSelectedProduct={setSelectedProduct} />
       <Outlet
         context={[
           updateCartItems,
@@ -38,7 +33,6 @@ const Shop = () => {
           data,
           cartItems,
           setCartItems,
-          headerRef,
         ]}
       />
     </main>

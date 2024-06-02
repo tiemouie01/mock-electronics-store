@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import { useOutletContext } from "react-router-dom";
 
 const ProductCard = ({ id, title, price, imageUrl, setSelectedProduct }) => {
-  const headerRef = useOutletContext()[5];
-
   return (
     <article className="flex items-center rounded-md border p-4">
       <Link

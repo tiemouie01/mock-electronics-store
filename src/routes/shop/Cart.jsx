@@ -7,7 +7,6 @@ const Cart = () => {
   const context = useOutletContext();
   const cartItems = context[3];
   const setCartItems = context[4];
-  const headerRef = context[5];
 
   const totalPrice = cartItems.reduce((prev, curr) => {
     const cost = curr.price * curr.quantity;
@@ -24,7 +23,7 @@ const Cart = () => {
 
   const products = cartItems.map((product, index) => {
     return (
-      <tr>
+      <tr key={product.id}>
         <td className="border p-2 text-center">{product.title}</td>
         <td className="border p-2 text-center">${product.price}</td>
         <td className="border p-2 text-center">{product.quantity}</td>
@@ -38,15 +37,10 @@ const Cart = () => {
   });
 
   return (
-    <section className="row-start-1 space-y-4 p-4 lg:col-start-2 lg:border">
+    <section className="row-start-1 space-y-4 p-4 lg:col-start-2 lg:max-w-md lg:border">
       <div className="flex items-center justify-between lg:mt-14">
         <h2 className="text-xl font-bold">Products in Cart</h2>
-        <Link
-          to="/shop"
-          onClick={() => {
-            headerRef.current.classList.toggle("hidden");
-          }}
-        >
+        <Link to="/shop">
           <FaWindowClose size={30} color="blue" />
         </Link>
       </div>
@@ -59,7 +53,7 @@ const Cart = () => {
             <th className="w-1/3 p-2">Price</th>
             <th className="w-1/3 p-2">Quantity</th>
           </thead>
-          {products}
+          <tbody>{products}</tbody>
         </table>
       )}
       <p className="text-center text-lg">
