@@ -38,7 +38,7 @@ const Cart = () => {
 
   return (
     <section className="row-start-1 space-y-4 p-4 lg:col-start-2 lg:max-w-md lg:border">
-      <div className="flex items-center justify-between lg:mt-14">
+      <div className="flex items-center justify-between">
         <h2 className="text-xl font-bold">Products in Cart</h2>
         <Link to="/shop">
           <FaWindowClose size={30} color="blue" />

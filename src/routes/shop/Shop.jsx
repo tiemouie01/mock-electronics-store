@@ -18,8 +18,9 @@ const Shop = () => {
 
   if (loading)
     return (
-      <div className="flex h-dvh items-center justify-center">
+      <div className="flex h-dvh items-center justify-center flex-col">
         <FaSpinner size={50} className="animate-spin" />;
+        <p>Getting the latest products...</p>
       </div>
     );
 

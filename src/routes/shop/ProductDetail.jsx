@@ -23,8 +23,8 @@ const ProductDetail = () => {
   return (
     <>
       {selected && (
-        <section className="row-start-1 space-y-4 p-4 lg:col-start-4 lg:border">
-          <div className="flex items-center justify-between lg:mt-14">
+        <section className="row-start-1 space-y-4 p-4 lg:col-start-4 lg:border lg:max-w-md">
+          <div className="flex items-center justify-between">
             <h2 className="text-xl font-bold">{selected.title}</h2>
             <Link to="/shop">
               <FaWindowClose size={30} color="blue" />
