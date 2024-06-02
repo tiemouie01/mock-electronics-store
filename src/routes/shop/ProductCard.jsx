@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useOutletContext } from "react-router-dom";
 
 const ProductCard = ({ id, title, price, imageUrl, setSelectedProduct }) => {
   return (
@@ -8,6 +7,7 @@ const ProductCard = ({ id, title, price, imageUrl, setSelectedProduct }) => {
         to="/shop/detail"
         onClick={() => {
           setSelectedProduct(id);
+          window.scrollTo(0,0);
         }}
         className="flex flex-col items-center gap-2"
       >
