@@ -15,8 +15,9 @@ export const routes = [
       {
         path: "/shop",
         element: <Shop />,
+        errorElement: <ErrorPage />,
         children: [
-          { path: "/shop/cart", element: <Cart /> }, 
+          { path: "/shop/cart", element: <Cart /> },
           { path: "/shop/detail", element: <ProductDetail /> },
         ],
       },
