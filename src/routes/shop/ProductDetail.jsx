@@ -52,7 +52,7 @@ const ProductDetail = () => {
             </label>
             <input
               type="text"
-              onChange={(e) => setQuantity(e.target.value)}
+              onChange={(e) => setQuantity(Number(e.target.value))}
               value={quantity}
               className="w-[4ch] p-2 text-lg"
             />
