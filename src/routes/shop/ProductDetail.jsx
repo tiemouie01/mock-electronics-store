@@ -81,7 +81,7 @@ const ProductDetail = () => {
             onClick={() => {
               if (quantity > 0) addToCart();
             }}
-            className="m-auto block rounded-lg border border-blue-600 bg-blue-500 p-2 text-white"
+            className="m-auto block rounded-lg border border-blue-600 bg-blue-500 p-2 font-bold text-white"
           >
             Add to Cart
           </button>
