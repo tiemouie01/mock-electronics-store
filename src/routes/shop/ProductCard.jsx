@@ -3,7 +3,7 @@ import { useOutletContext } from "react-router-dom";
 
 const ProductCard = ({ id, title, price, imageUrl, setSelectedProduct }) => {
   return (
-    <article className="flex items-center rounded-md border p-4">
+    <article className="flex items-center rounded-md border-2 p-4 transition-all lg:hover:border-blue-600">
       <Link
         to="/shop/detail"
         onClick={() => {

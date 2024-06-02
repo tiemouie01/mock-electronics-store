@@ -14,7 +14,7 @@ const Products = ({ products, setSelectedProduct }) => {
   ));
 
   return (
-    <section className="grid grid-cols-2 gap-4 p-4 pt-0 md:grid-cols-4">
+    <section className="grid grid-cols-2 gap-4 p-4 md:grid-cols-4">
       <div className="col-span-2 flex items-center justify-between bg-white py-2 lg:col-span-4">
         <h2 className="text-3xl font-semibold">Products</h2>
         <button className="rounded-lg border border-blue-600 bg-blue-500 p-2">
